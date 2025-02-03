@@ -1,0 +1,439 @@
+* {
+  box-sizing: border-box; /* Asegura que padding y border no aumenten el ancho total */
+  margin: 0;
+  padding: 0;
+}
+
+body{
+  font-family:'Montserrat', sans-serif;
+}
+
+
+header{
+  width: 100%;
+  height: auto;
+  background-image: url(imagenes/encabezado-imagen.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 10px 20px;
+}
+
+.menu-principal{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+}
+
+
+
+.logo-marina {
+  max-width: 7em; /* Mantén el tamaño original del logo */
+  height: auto; /* Ajusta el alto automáticamente */
+}
+
+
+/* Menú principal */
+.menu {
+  display: flex;
+  list-style: none;
+}
+
+.menu li {
+  margin-left: 20px;
+}
+
+.menu a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 700;
+  padding: 5px 10px; /* Espaciado interno */
+  transition: all 0.3s ease;
+  display: inline-block;
+}
+
+.menu a:hover {
+  background-color: rgb(15, 217, 224);
+  padding: 10px 20px; /* Incrementa el padding para hacerlo más ancho */
+  border-radius: 5px; /* Opcional: bordes redondeados */
+  color: black;
+}
+
+ /* Menú responsivo: botón hamburguesa */
+ .menu-toggle {
+  display: none; /* Oculto por defecto */
+  width: 40px;
+  height: 30px;
+  background: none;
+  border: 2px solid white;
+  cursor: pointer;
+  position: relative;
+}
+
+.menu-toggle span.menu-text {
+  display: none; /* Oculto por defecto */
+  position: absolute;
+  left: -90px; /* Ajuste de la distancia a la izquierda */
+  top: 50%; /* Centrado verticalmente */
+  transform: translateY(-50%);
+}
+
+.menu-text{
+  background-color: rgb(116, 236, 18);
+  padding: 5px;
+  border-radius: 5px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  font-weight: bold;
+  font-size: 16px;
+  color: white;
+  border: 4px solid black; /* Contorno negro y grueso */
+}
+
+.menu-toggle::before,
+.menu-toggle::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 5px;
+  background-color: white;
+  left: 0;
+  transition: all 0.3s;
+}
+
+.menu-toggle::before {
+top: 5px; /* Línea superior */
+}
+
+.menu-toggle::after {
+bottom: 5px; /* Línea inferior */
+}
+
+audio {
+  display: none; /* Ocultar el reproductor de audio */
+}
+
+
+.banner{
+  width: 100%;
+  height: auto;
+}
+
+.principal{
+  padding: 3em;
+  background-image: url(imagenes/main-imagen1.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin: 0 auto;
+}
+
+.titulo-color{
+  color: transparent;
+  text-align: center;
+  font-size: 2em;
+  clear: left;
+  font-family: 'Raleway', sans-serif;
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke-width: 3px;
+  -webkit-text-stroke-color: white;
+  text-shadow: 
+                        6px 6px #ff1f8f,
+                        10px 10px #000000;
+}
+
+.imagen-centrada {
+  display: block; /* Convierte la imagen en un elemento de bloque */
+  margin: 5px auto; /* Centra horizontalmente la imagen */
+  max-width: 300px; /* Evita que la imagen exceda el ancho del contenedor */
+  width: 100%; /* Escala la imagen dentro de su contenedor */
+  height: auto; /* Mantiene la proporción de la imagen */
+}
+
+.marketing{
+  text-align: center;
+  font-size: 25px; /* Cambia el tamaño del título */
+  text-decoration: underline; /* Subraya el título */
+
+}
+
+p {
+  margin: 0; /* Elimina márgenes por defecto */
+  margin-bottom: 0px; /* Añade espacio entre párrafos */
+  text-align: justify;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.principal p{
+  margin: 0 0 1em;
+  color: rgba(0,0,0 ,0.8);
+  display: block;
+}
+
+.principal strong{
+  font-weight: bold;
+}
+
+.mapa{
+  padding: 3em 0;
+  background-image: url(imagenes/main-2.jpg);
+  background-size: cover;
+  background-position:top;
+  background-repeat: no-repeat;
+
+}
+
+.titulo-mapa{
+  color: transparent;
+  text-align: center;
+  font-size: 2em;
+  clear: left;
+  font-family: 'Raleway', sans-serif;
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke-width: 3px;
+  -webkit-text-stroke-color: white;
+  text-shadow: 
+                        6px 6px #f10707,
+                        10px 10px #000000;
+}
+
+.bola{
+  width: auto;
+  max-width: 250px;
+  display: block;  /* Hace que el GIF sea un bloque (esto ayuda a centrarlo) */
+  margin: 0 auto;  /* Centra el GIF horizontalmente */
+}
+
+.mapa p{
+  margin: 0 0 2em;
+  text-align: center;
+  color: rgba(0,0,0 ,0.8);
+}
+
+.mapa-contenido{
+  width: 940px;
+  margin: 0 auto;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.9);
+  border-radius: 8px; /* Opcional: Bordes redondeados */
+  overflow: hidden; /* Asegura que el mapa no sobresalga del contenedor */
+  border: 0; /* Elimina el borde del iframe */
+
+}
+
+/* Estilos para la sección del formulario */
+.formulario-mayor{
+  background-color: rgb(56, 209, 209);
+  padding: 3em 0;
+}
+
+.formulario {
+  background-image: url(imagenes/formulario-hd.jpg);
+  background-size: cover;  /* ajusta la imagen sin que se deforme */
+  background-position: right; /* Centra la imagen */
+  background-repeat: no-repeat;  /* Evita que la imagen se repita */
+  padding: 20px;
+  margin: auto; /* Centra el formulario horizontalmente */
+  border-radius: 8px;
+  max-width: 600px; /* Limita el ancho máximo del formulario */
+  box-sizing: border-box; /* Asegura que el padding no sume al ancho total */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.9);
+}
+
+.titulo-formulario{
+  display: inline-block; /* Hace que el estilo sea más personalizable */
+  font-size: 1.2em;
+  color: #030303;
+  font-weight: bold;
+  background-color: #c1fcc1;
+  padding: 5px 10px;
+  border-radius: 5px;
+  margin: 10px;
+}
+
+
+.formulario label {
+  display: inline-block; /* Para que el label solo ocupe el ancho de su contenido */
+  width: auto; /* Ancho automático según el contenido */
+  font-weight: bold;
+  margin-bottom: 5px;
+  background-color: #87ff77;  /* Fondo rosado */
+  color: rgb(0, 0, 0);  /* Texto blanco para contraste */
+  padding: 4px 8px;  /* Espaciado dentro del label */
+  border-radius: 8px;  /* Bordes redondeados */
+  }
+
+
+.formulario input,
+.formulario textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.formulario button {
+  padding: 10px 20px;
+  background-color: #3ea3fc;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.formulario button:hover {
+  background-color: #1d8ad6;
+}
+
+
+footer{
+  width: 100%;
+  background-image: url(imagenes/encabezado-imagen.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 0 5px;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between; /* Espacio entre los dos divs */
+  align-items: center; /* Alineación vertical */
+}
+
+.imagen-laterales{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Alinea el contenido de la izquierda */
+}
+
+.text-bajo-logo {
+  color: white;
+  font-size:x-small;
+  text-align: left; /* Alinea el texto a la izquierda */
+  margin:0 0 5px 0; /* Elimina márgenes extra del texto */
+  width: 120%; /* Hazlo más ancho para que se desborde */
+}
+
+.informativo {
+  text-align: left; /* Alinea todo el texto dentro de .informativo a la izquierda */
+  font-size: 12px;
+  backdrop-filter: blur(10px); /* Efecto de desenfoque */
+  -webkit-backdrop-filter: blur(10px); /* Compatibilidad para Safari */
+  border: 1px solid rgba(255, 255, 255, 0.2); /* Opcional: borde semitransparente */
+  border-radius: 10px; /* Bordes redondeados */
+  padding: 10px; /* Espaciado interno */
+  max-width: 940px; /* Máximo de 940px en pantallas grandes */
+  width: auto; /* Se ajusta automáticamente según el contenido */
+  box-sizing: border-box; /* Asegura que el padding no sume al ancho total */
+}
+
+.informativo p{
+  font-weight: bold; /* Letra más gruesa para resaltar */
+  color: rgb(255, 254, 254);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Sombra para contraste */
+  margin: 0;
+  text-align: left; /* Asegura que los textos también estén alineados a la izquierda */
+}
+
+
+.informativo p:first-child {
+  font-size: 1.5em; /* Aumenta el tamaño de la fuente */
+  font-weight: bold; /* Hace el texto más grueso */
+  color: #ee0505; /* Cambia el color del texto, puedes elegir otro color */
+  margin-bottom: 5px; /* Espacio debajo del primer párrafo */
+}
+
+@media (max-width: 1024px) {
+  .informativo {
+    max-width: 85%; /* Ajuste para pantallas de tablet (menos que 1024px) */
+    width: auto; /* Ajuste automático del ancho */
+    padding: 10px; /* Ajuste del padding */
+  }
+}
+
+/* Ocultar menú en dispositivos móviles por defecto */
+@media (max-width: 768px) {
+.menu {
+  display: none;
+  flex-direction: column;
+  position: absolute;
+  top: 70px;
+  right: 20px;
+  padding: 10px;
+  border-radius: 8px;
+  transition: background-color 0s ease; /* Transición rápida de 0.1 segundos */
+}
+
+.menu-toggle {
+  display: flex;
+}
+
+.menu-toggle span.menu-text {
+display: inline-block; /* Mostrar el texto "Menú" */
+}
+
+.menu li{
+margin: 10px 0;
+}
+
+  .menu a{
+      font-size: 16px; /* Tamaño del texto */
+      font-weight: 700; /* Letras más gruesas */
+      padding: 10px 15px; /* Espaciado interno para mantener proporción */
+  }
+
+  .menu a:hover{
+    background-color: rgb(85, 252, 8);
+    color: black;
+    transition: background-color 0s ease; /* Transición rápida al hacer hover */
+  }
+
+  .menu.show {
+    display: flex; /* Mostrar el menú cuando se active */
+    background-color: #15cedb;
+}
+
+
+/* Otros estilos */
+.banner {
+width: 100%;
+}
+
+  .arriba, .principal, .mapa-contenido{
+      width: auto;
+  }
+
+  .mapa-contenido{
+      max-width: 90%; /* Reduce el ancho máximo a un 90% del ancho de la pantalla */
+      padding: 0 0; /* Añade algo de padding para centrar el mapa */
+  }
+
+  .formulario{
+    max-width: 90%; /* Reduce el ancho máximo a un 90% del ancho de la pantalla */
+  }
+
+  .formulario label {
+    display: block; /* Para que quede alineado en columna */
+    text-align: left; /* Alinea el texto a la izquierda */
+    width: fit-content; /* Ocupa solo el espacio del contenido */
+    margin-bottom: 3px; /* Reduce el espacio inferior */
+  }
+
+.text-bajo-logo{
+    font-size: 8px;
+}
+.informativo{
+  max-width: 90%; /* Limita el ancho a un 90% para dispositivos de tamaño mediano (tablets, iPads, etc.) */
+  width: auto; /* No se estira al 100% */
+  padding: 5px; /* Mantener el padding */
+  transform: translateX(-0px); /* Desplaza 20px adicional hacia la izquierda */
+  font-size: 11px;
+}
+
+.informativo p{
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Sombra para resaltar */
+}
+
+}
